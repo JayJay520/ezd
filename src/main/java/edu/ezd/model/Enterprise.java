@@ -16,6 +16,7 @@ public class Enterprise {
     private List<Post> posts;   //企业职位
     private List<Interview> interviews; //面试的人
 
+
     public int getEnterpriseId() {
         return enterpriseId;
     }
