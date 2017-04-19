@@ -1,4 +1,4 @@
-package edu.ezd.control;
+package edu.ezd.control.app;
 
 import com.google.gson.Gson;
 import edu.ezd.model.EnterpriseType;
@@ -13,21 +13,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Method;
 import java.util.List;
 
 /**
  * Created by JayJay on 2017/4/17.
  */
 @Controller
-@RequestMapping("/type")
-public class EnterperiserTypeControler {
-    private static final Logger log = Logger.getLogger(EnterperiserTypeControler.class);
+@RequestMapping("/enterpriseType")
+public class EnterperiseTypeControler {
+    private static final Logger log = Logger.getLogger(EnterperiseTypeControler.class);
 
     @Resource
     private EnterpriseTypeService enterpriseTypeService;
 
-    @RequestMapping(value = "/getType", produces = {"application/json;charset=UTF-8"})
+    @RequestMapping(value = "/getType", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public String getType(HttpServletResponse response) throws UnsupportedEncodingException {
         List<EnterpriseType> list =  enterpriseTypeService.getEnterpriseList();

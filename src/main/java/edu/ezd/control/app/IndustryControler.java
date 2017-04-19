@@ -1,4 +1,4 @@
-package edu.ezd.control;
+package edu.ezd.control.app;
 
 import com.google.gson.Gson;
 import edu.ezd.model.Industry;
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  * Created by JayJay on 2017/4/17.
  */
 @Controller
-@RequestMapping("/industry")
+@RequestMapping("/industryType")
 public class IndustryControler {
     @Resource
     private IndustryService industryService;

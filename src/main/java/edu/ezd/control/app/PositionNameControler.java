@@ -1,12 +1,9 @@
-package edu.ezd.control;
+package edu.ezd.control.app;
 
-import edu.ezd.model.Industry;
 import edu.ezd.model.PositionName;
-import edu.ezd.service.IndustryService;
 import edu.ezd.service.PositionNameService;
 import edu.ezd.util.GsonUtil;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +22,7 @@ public class PositionNameControler {
     private PositionNameService positionNameService;
 
 
-    @GetMapping(value = "/{industryId}" ,produces = {"application/json;charset=UTF-8"})
+    @GetMapping(value = "/{industryId}" ,produces = "application/json;charset=UTF-8")
     @ResponseBody
     public String getIndustry(@PathVariable int industryId){
         List<PositionName> positionNames = positionNameService.getPositionName(industryId);
